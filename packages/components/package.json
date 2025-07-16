@@ -1,0 +1,9 @@
+{
+  "name": "@tide-element/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "sideEffects": [
+    "*/style/*"
+  ]
+}

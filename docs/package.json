@@ -1,0 +1,15 @@
+{
+  "name": "@tide-element/docs",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "register:components": "vitepress-rc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
