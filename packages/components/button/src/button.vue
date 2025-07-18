@@ -37,7 +37,7 @@ defineExpose(<ButtonInstance>{
 <template>
   <component
     :is="tag"
-    ref="buttonRef"
+    ref="ref"
     :autofocus="autofocus"
     class="ti-button"
     :type="tag === 'button' ? nativeType : undefined"

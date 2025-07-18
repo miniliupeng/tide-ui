@@ -20,9 +20,6 @@ importers:
       '@tide-element/components':
         specifier: workspace:^
         version: link:packages/components
-      '@tide-element/core':
-        specifier: workspace:^
-        version: link:packages/core
       '@tide-element/hooks':
         specifier: workspace:^
         version: link:packages/hooks
@@ -35,6 +32,9 @@ importers:
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
+      tide-ui:
+        specifier: workspace:^
+        version: link:packages/core
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.3)

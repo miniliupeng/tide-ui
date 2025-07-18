@@ -29,11 +29,11 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@tide-element/components": "workspace:^",
-    "@tide-element/core": "workspace:^",
     "@tide-element/hooks": "workspace:^",
     "@tide-element/theme": "workspace:^",
     "@tide-element/utils": "workspace:^",
     "lodash-es": "^4.17.21",
+    "tide-ui": "workspace:^",
     "vue": "^3.5.13"
   },
   "devDependencies": {
