@@ -3,22 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/esm/index.d.ts",
-      "import": "./dist/esm/index.mjs",
-      "require": "./dist/cjs/index.cjs"
-    },
-    "./esm/*": {
-      "types": "./dist/esm/*/index.d.ts",
-      "import": "./dist/esm/*/index.mjs"
-    },
-    "./cjs/*": {
-      "types": "./dist/cjs/*/index.d.ts",
-      "require": "./dist/cjs/*/index.cjs"
-    },
-    "./css/*": "./dist/css/*"
-  },
   "scripts": {
     "build": "vite build"
   },

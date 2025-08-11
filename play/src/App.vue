@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import type { ButtonType } from '@tide-element/components/button/types/button'
 
 const count = ref(0)
 
@@ -11,6 +12,7 @@ const handleClick = () => {
 const icon = ref('user')
 
 const color = ref('red')
+const type = ref<ButtonType>('primary')
 
 const text = ref()
 
@@ -19,6 +21,7 @@ onMounted(() => {
     color.value = color.value === 'red' ? 'blue' : 'red'
     icon.value = icon.value === 'user' ? 'user-pen' : 'user'
     text.value = '1asfa11'
+    type.value = type.value === 'primary' ? 'success' : 'primary'
   }, 1000)
 })
 </script>
@@ -29,7 +32,7 @@ onMounted(() => {
   >
   <ti-button type="success" size="small" icon="search">{{ text }}</ti-button>
   <ti-button plain icon="search">Click me</ti-button>
-  <ti-button-group size="large">
+  <ti-button-group size="large" :type="type">
     <ti-button loading>Click me</ti-button>
     <ti-button disabled>Click me</ti-button>
   </ti-button-group>

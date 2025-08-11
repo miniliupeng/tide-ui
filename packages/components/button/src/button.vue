@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { inject, useTemplateRef } from 'vue'
+import { inject, useTemplateRef, computed } from 'vue'
 import type { ButtonProps, ButtonInstance, ButtonEmits } from '../types/button'
 import { throttle } from 'lodash-es'
 import TiIcon from '../../icon/src/icon.vue'
@@ -20,9 +20,9 @@ const emits = defineEmits<ButtonEmits>()
 const ref = useTemplateRef<HTMLButtonElement>('buttonRef')
 const ctx = inject(BUTTON_GROUP_CTX_KEY, undefined)
 
-const size = ctx?.size ?? props.size
-const type = ctx?.type ?? props.type
-const disabled = ctx?.disabled ?? props.disabled
+const size = computed(() => ctx?.size ?? props.size)
+const type = computed(() => ctx?.type ?? props.type)
+const disabled = computed(() => ctx?.disabled ?? props.disabled)
 
 const handleClick = (e: MouseEvent) => emits('click', e)
 const handleClickThrottled = throttle(handleClick, props.throttleDuration, {
@@ -58,3 +58,7 @@ defineExpose(<ButtonInstance>{
     <span><slot></slot></span>
   </component>
 </template>
+
+<style scoped>
+@import '../style/button.css';
+</style>
